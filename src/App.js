@@ -2,11 +2,19 @@ import './App.css';
 import Boton from './componentes/Boton';
 import Contador from './componentes/Contador';
 import jsbmLogo from './img/LogoJSBM.png';
+import { useState } from 'react';
 
 function App() {
 
+  // Constante el cual contiene un arreglo que tiene dos valores el primero es el numero 
+  // de clics que realiza el usuario y el segundo lo cambia.
+  // Este arreglo va a retornar un hook useState el cual inicia el contador en 0
+  const [numClics, setNumClics] = useState(0);
+
   const manejarClic = () => {
-    console.log('Clic');
+    // Se usa la variable que cambia el estado y se le incluye el clic +1
+    // Esto cambia el estado de numClics sumandole 1 cada vez que se haga un clic
+    setNumClics(numClics + 1);
   }
 
   const reiniciarContador = () => {
@@ -22,8 +30,7 @@ function App() {
           alt="Logo" />
       </div>
       <div className="contenedor-principal">
-        {/* Se incluye el componente contador de clics */}
-        <Contador numClics='3' />
+        <Contador numClics={numClics} />
         <Boton 
           texto='Clic'
           esBotonDeClic={true}
