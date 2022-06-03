@@ -1,11 +1,10 @@
 import './App.css';
 import Boton from './componentes/Boton';
+import Contador from './componentes/Contador';
 import jsbmLogo from './img/LogoJSBM.png';
 
 function App() {
 
-  // Se define una funcion flecha la cual crea una funcion a la constante y lo que 
-  // retorna es lo que sigue despues de la => dentro de { }
   const manejarClic = () => {
     console.log('Clic');
   }
@@ -23,6 +22,8 @@ function App() {
           alt="Logo" />
       </div>
       <div className="contenedor-principal">
+        {/* Se incluye el componente contador de clics */}
+        <Contador numClics='3' />
         <Boton 
           texto='Clic'
           esBotonDeClic={true}
