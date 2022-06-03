@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Boton.css';
 
 // sintaxis de desestructuracion se refiere a la misma propiedad de entrada, 
 // es decir un solo argumento de entrada y se asigna dentro de ({ })
