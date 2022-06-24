@@ -1,7 +1,7 @@
 import './App.css';
 import Boton from './componentes/Boton';
 import Contador from './componentes/Contador';
-import jsbmLogo from './img/LogoJSBM.png';
+import jsbmLogo from './img/LogoJSBM-Circle.png';
 import { useState } from 'react';
 
 function App() {
